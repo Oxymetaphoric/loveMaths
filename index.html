@@ -10,7 +10,7 @@
         <script src="https://kit.fontawesome.com/4bb2ade608.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
-    <body>
+    <div>
         <h1 class="heading">
         <img src="/assets/images/logo.png" alt="logo"> Love Maths
         </h1>
@@ -29,13 +29,22 @@
                     <i class="fa-solid fa-divide"></i>
                 </button>
             </div>
+        <div class="question-area">
+            <span id="operand1">0</span>
+            <span id="operator">x</span>
+            <span id="operand2">0</span>
+            <span>=</span>
+            <p class="answer message">Enter answer:</p>
+            <input type="number" id="answer-box">
         </div>
-        <div class="score-area">
-            <p class="scores">Correct Answers: <span id="score"></span>0</p>
-            <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
-        </div>
+        <button class="btn btn--gray">Submit</button>
+    </div>
+    <div class="score-area">
+        <p class="scores">Correct Answers: <span id="score"></span>0</p>
+        <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+    </div>
 
-        <script src="/assets/js/script.js" async defer></script>
+    <script src="/assets/js/script.js" async defer></script>
     </body>
 </html>
 
