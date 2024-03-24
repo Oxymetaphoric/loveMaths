@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             if (button.getAttribute("data-type") === "submit") {
                 checkAnswer();
+                document.getElementById("answer-box") = "";
             } else {
                 let gameType = button.getAttribute("data-type");
                 runGame(gameType);
@@ -22,6 +23,7 @@ function runGame(gameType) {
   let num1 = Math.ceil(Math.random() *25);
   let num2 = Math.ceil(Math.random() *25);
 
+
   if (gameType === "addition") {
     displayAdditionQuestion(num1, num2);
   } else if (gameType ==="subtraction") {
@@ -32,6 +34,7 @@ function runGame(gameType) {
         alert(`unknown game type: ${gameType}`);
         throw `unknown game type: ${gameType}. Aborting!`;
   }
+
 }
 
 
@@ -95,7 +98,7 @@ function displaySubtractQuestion(operand1, operand2) {
 function displayMultiplyQuestion(operand1, operand2) {
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
-    document.getElementById('operator').textContent = "*";
+    document.getElementById('operator').textContent = "x";
 }
 
 
