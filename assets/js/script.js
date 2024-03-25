@@ -7,19 +7,25 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             if (button.getAttribute("data-type") === "submit") {
                 checkAnswer();
-                document.getElementById("answer-box") = "";
             } else {
                 let gameType = button.getAttribute("data-type");
                 runGame(gameType);
             }
         });
     }
-
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+    })
     runGame("addition");
 });
 
 
 function runGame(gameType) {
+document.getElementById("answer-box").value = "";
+document.getElementById("answer-box").focus();
+
   let num1 = Math.ceil(Math.random() *25);
   let num2 = Math.ceil(Math.random() *25);
 
